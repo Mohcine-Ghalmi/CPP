@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 03:14:55 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/08/31 06:17:53 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/08/31 07:50:49 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class Contact
 		std::string CheckInput(std::string mssg);
 		void    CreatContact();
 		void    ShowContact();
-		void    GiveIndex();
+		void    GiveIndex(int i);
 };
 
 class PhoneBook

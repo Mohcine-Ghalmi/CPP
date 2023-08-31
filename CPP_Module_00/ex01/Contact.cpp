@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 03:06:04 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/08/31 06:45:19 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/08/31 07:53:00 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,27 +45,13 @@ void   Contact::CreatContact()
 	this->DarksetSecret = this->CheckInput("Drakset Secret: ");
 }
 
-void Contact::GiveIndex()
+void Contact::GiveIndex(int i)
 {
-	this->BookIndex += 1;
+	this->BookIndex = i;
 }
+
 void Contact::ShowContact()
 {
-	
+	std::cout << ""
 }
 
-void    PhoneBook::AddConatct()
-{
-	
-}
-
-Contact PhoneBook::SearchContact()
-{
-	Contact here;
-	return here;
-}
-
-void    PhoneBook::ExitProgram()
-{
-	
-}
