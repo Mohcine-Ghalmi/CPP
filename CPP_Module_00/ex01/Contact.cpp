@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 03:06:04 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/08/31 07:53:00 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/09/01 00:39:22 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,6 @@ void Contact::GiveIndex(int i)
 
 void Contact::ShowContact()
 {
-	std::cout << ""
+	std::cout << "";
 }
 
