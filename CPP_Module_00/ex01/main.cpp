@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 04:23:01 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/08/31 06:10:55 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/09/01 16:27:44 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,7 @@
 int main(void)
 {
     Contact user;
+    user.InitVar();
     user.CreatContact();
+    user.ShowContact();
 }

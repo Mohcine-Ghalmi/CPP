@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 03:14:55 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/08/31 07:50:49 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/09/01 16:50:47 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define MYAWSESOMEPHONEBOOK_HPP
 
 #include <iostream>
+#include <string.h>
 
 class Contact
 {
@@ -28,9 +29,10 @@ class Contact
 		Contact();
 		~Contact();
 		std::string CheckInput(std::string mssg);
+		void	InitVar();
 		void    CreatContact();
 		void    ShowContact();
-		void    GiveIndex(int i);
+		void	SetIndex(int IndexBook);
 };
 
 class PhoneBook
@@ -43,7 +45,6 @@ class PhoneBook
 		void    AddConatct();
 		Contact SearchContact();
 		void    ExitProgram();
-		
 };
 
 #endif
