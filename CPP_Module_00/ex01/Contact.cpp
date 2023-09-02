@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 03:06:04 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/01 16:50:40 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/09/02 21:01:01 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ std::string Contact::CheckInput(std::string mssg)
 	do
 	{
 		std::getline(std::cin, Input);
-		if (Input.empty() && std::cin.good())
+		if (Input.empty() && !std::cin.good())
 		{
 			std::cout << "the input is invalid pleas try again" << std::endl;
 			std::cout << mssg;
@@ -34,11 +34,6 @@ std::string Contact::CheckInput(std::string mssg)
 			yes = true;
 	}while(!yes);
 	return (Input);
-}
-
-void	Contact::InitVar()
-{
-	this->BookIndex = 0;
 }
 
 void   Contact::CreatContact()
@@ -52,13 +47,12 @@ void   Contact::CreatContact()
 
 void Contact::ShowContact()
 {
-	std::cout << "|" << this->BookIndex  << std::endl;
-	std::cout << "|" << ((this->FirstName.length() > 10) ? (this->FirstName.substr(0, 10) + ".") : this->FirstName) << std::endl;
-	std::cout << "|" << ((this->LastName.length() > 10) ? (this->LastName.substr(0, 10) + ".") : this->LastName) << std::endl;
-	std::cout << "|" << ((this->Nickname.length() > 10) ? (this->Nickname.substr(0, 10) + ".") : this->Nickname) << std::endl;
-}
-
-void	Contact::SetIndex(InedxBook)
-{
-	this->BookIndex = IndexBook;
+	// if (this->FirstName.empty())
+	// {
+	// 	std::cout << "there is no user with this index" << std::endl;
+	// 	return ;
+	// }
+	std::cout << " | " << std::setw(5) << ((this->FirstName.length() > 10) ? (this->FirstName.substr(0, 10) + ".") : this->FirstName);
+	std::cout << " | " << std::setw(5) << ((this->LastName.length() > 10) ? (this->LastName.substr(0, 10) + ".") : this->LastName);
+	std::cout << " | " << std::setw(5) << ((this->Nickname.length() > 10) ? (this->Nickname.substr(0, 10) + ".") : this->Nickname) << std::endl;
 }
