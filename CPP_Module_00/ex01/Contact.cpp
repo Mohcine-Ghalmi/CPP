@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 03:06:04 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/02 21:01:01 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/09/02 21:19:32 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,16 @@ std::string Contact::CheckInput(std::string mssg)
 	return (Input);
 }
 
+int	Contact::CheckEmpty()
+{
+	if (this->FirstName.empty())
+	{
+		std::cout << "There's no contact with this index" << std::endl;
+		return 0;
+	}
+	return 1;
+}
+
 void   Contact::CreatContact()
 {
 	this->FirstName = this->CheckInput("First Name:" );
@@ -47,11 +57,6 @@ void   Contact::CreatContact()
 
 void Contact::ShowContact()
 {
-	// if (this->FirstName.empty())
-	// {
-	// 	std::cout << "there is no user with this index" << std::endl;
-	// 	return ;
-	// }
 	std::cout << " | " << std::setw(5) << ((this->FirstName.length() > 10) ? (this->FirstName.substr(0, 10) + ".") : this->FirstName);
 	std::cout << " | " << std::setw(5) << ((this->LastName.length() > 10) ? (this->LastName.substr(0, 10) + ".") : this->LastName);
 	std::cout << " | " << std::setw(5) << ((this->Nickname.length() > 10) ? (this->Nickname.substr(0, 10) + ".") : this->Nickname) << std::endl;

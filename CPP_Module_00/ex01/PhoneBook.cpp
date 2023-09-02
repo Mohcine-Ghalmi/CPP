@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 03:06:06 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/02 20:58:58 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/09/02 21:18:54 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ void PhoneBook::SearchContact()
 			std::cout << "Invalid input" << std::endl;
 		else
 		{
+			if (!this->contact[Contact - 1].CheckEmpty())
+				return  ;
 			std::cout << Contact;
 			this->contact[Contact - 1].ShowContact();
 			break;
