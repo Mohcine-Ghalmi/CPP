@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 03:06:06 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/03 12:02:22 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/09/03 13:03:46 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,17 @@ bool isNumber(const std::string& s)
 void    PhoneBook::AddConatct()
 {
 	this->contact[this->ContactIndex].CreatContact();
-	// std::cout << "Adding Contact";
-	// for (int i = 0; i < 5;i++)
-	// {
-	// 	std::cout << ".";
-	// 	std::this_thread::sleep_for(std::chrono::milliseconds(50));
-	// }
-	// std::cout << std::endl;
+	std::cout << "Adding Contact";
+	std::flush(std::cout);
+	for (int i = 0; i < 5;i++)
+	{
+		std::cout << ".";
+		std::flush(std::cout);
+		std::this_thread::sleep_for(std::chrono::milliseconds(500));
+	}
+	std::cout << std::endl;
+	std::cout << "Contact Added";
+	std::cout << std::endl;
 	this->ContactIndex++;
 }
 
