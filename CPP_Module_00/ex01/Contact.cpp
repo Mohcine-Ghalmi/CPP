@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 03:06:04 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/03 10:58:54 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/09/03 12:01:24 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,12 @@ std::string GetNum()
 	Valid = 0;
 	do
 	{
-		std::cout << "Phone Number\t: ";
-		std::getline(std::cin, Input);
+		std::cout << "📞Phone Number\t: ";
+		if (!std::getline(std::cin, Input))
+			exit(0);
 		Valid = isAlphaNumeric(Input);
 		if (Valid)
-			std::cout << "the input is invalid pleas try again" << std::endl;
+			std::cout  << "\x1b[31m" << "the input is invalid try again" << "\x1b[0m" << std::endl;
 	}while(Valid);
 	return (Input);	
 }
@@ -50,11 +51,11 @@ std::string Contact::CheckInput(std::string mssg)
 	{
 		std::cout << mssg;
 		if (!std::getline(std::cin, Input))
-			exit(1);
+			exit(0);
 		if (!Input.empty() && std::cin.good())
 			Valid = true;
 		else
-			std::cout << "the input is invalid pleas try again" << std::endl;
+			std::cout  << "\x1b[31m" << "the input is invalid try again" << "\x1b[0m" << std::endl;
 	}while(!Valid);
 	return (Input);
 }
@@ -63,7 +64,7 @@ int	Contact::CheckEmpty()
 {
 	if (this->FirstName.empty())
 	{
-		std::cout << "There's no contact with this index" << std::endl;
+		std::cout << "\x1b[31m" << "There's no contact with this index" << "\x1b[0m" << std::endl;
 		return 0;
 	}
 	return 1;
@@ -71,25 +72,26 @@ int	Contact::CheckEmpty()
 
 void   Contact::CreatContact()
 {
-	this->FirstName = this->CheckInput("First Name\t: ");
-	this->LastName = this->CheckInput("Last Name\t: ");
-	this->Nickname = this->CheckInput("Nick Name\t: ");
+	this->FirstName = this->CheckInput("😊First Name\t: ");
+	this->LastName = this->CheckInput("😄Last Name\t: ");
+	this->Nickname = this->CheckInput("📛Nick Name\t: ");
 	this->PhoneNumber = GetNum();
-	this->DarksetSecret = this->CheckInput("Drakset Secret\t: ");
+	this->DarksetSecret = this->CheckInput("🤐Drakset Secret: ");
 }
 
 void Contact::ShowContact()
 {
 	std::cout << " | " << std::setw(10) << ((this->FirstName.length() > 10) ? (this->FirstName.substr(0, 10) + ".") : this->FirstName);
 	std::cout << " | " << std::setw(10) << ((this->LastName.length() > 10) ? (this->LastName.substr(0, 10) + ".") : this->LastName);
-	std::cout << " | " << std::setw(10) << ((this->Nickname.length() > 10) ? (this->Nickname.substr(0, 10) + ".") : this->Nickname) << std::endl;
+	std::cout << "| " << std::setw(10) << ((this->Nickname.length() > 10) ? (this->Nickname.substr(0, 10) + ".") : this->Nickname);
+	std::cout << "|" << std::endl;
 }
 
 void Contact::ShowContactInfo()
 {
-	std::cout << "First Name\t:\t" << this->FirstName << std::endl;
-	std::cout << "Last Name\t:\t" << this->LastName << std::endl;
-	std::cout << "Nick Name\t:\t" << this->Nickname << std::endl;
-	std::cout << "Phone Number\t:\t" << this->PhoneNumber << std::endl;
-	std::cout << "Drakset Secret\t:\t" << this->DarksetSecret << std::endl;
+	std::cout << "😊First Name\t:\t" << this->FirstName << std::endl;
+	std::cout << "😄Last Name\t:\t" << this->LastName << std::endl;
+	std::cout << "📛Nick Name\t:\t" << this->Nickname << std::endl;
+	std::cout << "📞Phone Number\t:\t" << this->PhoneNumber << std::endl;
+	std::cout << "🤐Drakset Secret:\t" << this->DarksetSecret << std::endl;
 }

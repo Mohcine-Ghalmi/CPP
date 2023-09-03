@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 03:06:06 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/03 09:05:49 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/09/03 12:02:22 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ PhoneBook::~PhoneBook(){};
 
 void        help_menu()
 {
-    std::cout << "|---------Welcome to the awesome Phonebook ☎📔----------|" << std::endl;
-    std::cout << "|                        1-ADD                          |" << std::endl;
-    std::cout << "|                        2-SEARCH                       |" << std::endl;
-    std::cout << "|                        3-EXIT                         |" << std::endl;
-    std::cout << "|-------------------------------------------------------|" << std::endl;
+    std::cout << "\x1b[34m" << "|---------Welcome to the awesome Phonebook📱📔----------|" << std::endl;
+    std::cout << "\x1b[32m" << "|                        1-ADD                          |" << std::endl;
+    std::cout << "\x1b[33m" << "|                        2-SEARCH                       |" << std::endl;
+    std::cout << "\x1b[31m" << "|                        3-EXIT                         |" << std::endl;
+    std::cout << "\x1b[34m" << "|-------------------------------------------------------|" << "\x1b[0m" << std::endl;
 }
 
 bool isNumber(const std::string& s)
@@ -35,28 +35,42 @@ bool isNumber(const std::string& s)
 void    PhoneBook::AddConatct()
 {
 	this->contact[this->ContactIndex].CreatContact();
+	// std::cout << "Adding Contact";
+	// for (int i = 0; i < 5;i++)
+	// {
+	// 	std::cout << ".";
+	// 	std::this_thread::sleep_for(std::chrono::milliseconds(50));
+	// }
+	// std::cout << std::endl;
 	this->ContactIndex++;
 }
 
 void PhoneBook::SearchContact()
 {
-	std::string ContactIndex;
-	int	Contact;
-	
+    std::string ContactIndex;
+    int Contact;
+
+	std::cout << "\x1b[32m" ;
+    std::cout << "----------------------------------------------" << std::endl;
+    std::cout << "  Index | First Name | Last Name |  Nickname |" << std::endl;
+    std::cout << "----------------------------------------------" << std::endl;
+
 	for (int i = 0; i < 8; i++)
 	{
 		std::cout << std::setw(5) << i + 1 << std::setw(5);
 		this->contact[i].ShowContact();
+		std::cout << "----------------------------------------------" << std::endl;
 	}
+	std::cout << "\x1b[0m";
 	while(1) 
 	{
 		std::cout << "Enter the conatc\'s index: ";
 		if (!std::getline(std::cin, ContactIndex))
-			exit(1);
+			exit(0);
 		if (ContactIndex.length() == 1 &&  isNumber(ContactIndex))
 			Contact = std::stoi(ContactIndex);
 		if (Contact < 1 || Contact > 8)
-			std::cout << "Invalid input" << std::endl;
+			std::cout << "\x1b[31m" <<"Invalid input" << "\x1b[0m" << std::endl;
 		else
 		{
 			if (!this->contact[Contact - 1].CheckEmpty())
@@ -68,6 +82,7 @@ void PhoneBook::SearchContact()
 		}
 	}
 }
+
 
 void	PhoneBook::InitIndex()
 {

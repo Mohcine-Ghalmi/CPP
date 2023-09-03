@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 04:23:01 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/03 08:49:27 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/09/03 11:16:47 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ int main(void)
         else if (Input.compare("EXIT"))
             std::cout << "Invalid command" << std::endl;
     } while (Input.compare("EXIT"));
+    std::cout << "\x1b[31m" << "🔥See you in hell🎃" << std::endl;
     return (0);
 }
