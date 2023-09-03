@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 03:14:55 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/02 21:17:04 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/09/03 08:50:11 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ class Contact
 		void    CreatContact();
 		void    ShowContact();
 		int		CheckEmpty();
+		void	ShowContactInfo();
 };
 
 class PhoneBook
@@ -46,7 +47,7 @@ class PhoneBook
 		void    AddConatct();
 		void	SearchContact();
 		void	InitIndex();
-		void	help_menu();
 };
 
+void        help_menu();
 #endif

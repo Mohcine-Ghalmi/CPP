@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 03:06:06 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/02 21:18:54 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/09/03 09:05:49 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 PhoneBook::PhoneBook(){};
 PhoneBook::~PhoneBook(){};
 
-void        PhoneBook::help_menu()
+void        help_menu()
 {
     std::cout << "|---------Welcome to the awesome Phonebook ☎📔----------|" << std::endl;
     std::cout << "|                        1-ADD                          |" << std::endl;
@@ -61,8 +61,9 @@ void PhoneBook::SearchContact()
 		{
 			if (!this->contact[Contact - 1].CheckEmpty())
 				return  ;
-			std::cout << Contact;
-			this->contact[Contact - 1].ShowContact();
+			std::cout << "----------->> CONTACT #" << Contact << " <<-----------" << std::endl;
+			this->contact[Contact - 1].ShowContactInfo();
+			std::cout << "--------------------------------------" << std::endl;
 			break;
 		}
 	}

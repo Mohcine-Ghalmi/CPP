@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 04:23:01 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/02 16:13:38 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/09/03 08:49:27 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main(void)
     user.InitIndex();
     do
     {
-        user.help_menu();
+        help_menu();
         std::cout << ">";
         if (!std::getline(std::cin, Input))
             return (0);
