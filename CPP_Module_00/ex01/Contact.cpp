@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 03:06:04 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/03 12:01:24 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/09/15 15:16:33 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ std::string Contact::CheckInput(std::string mssg)
 		std::cout << mssg;
 		if (!std::getline(std::cin, Input))
 			exit(0);
-		if (!Input.empty() && std::cin.good())
+		if (!Input.empty())
 			Valid = true;
 		else
 			std::cout  << "\x1b[31m" << "the input is invalid try again" << "\x1b[0m" << std::endl;

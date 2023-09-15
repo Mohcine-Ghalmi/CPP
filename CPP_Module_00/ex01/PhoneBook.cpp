@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 03:06:06 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/03 13:03:46 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/09/15 15:37:39 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,14 @@ void    PhoneBook::AddConatct()
 	{
 		std::cout << ".";
 		std::flush(std::cout);
-		std::this_thread::sleep_for(std::chrono::milliseconds(500));
+		// sleep();
 	}
 	std::cout << std::endl;
 	std::cout << "Contact Added";
 	std::cout << std::endl;
 	this->ContactIndex++;
+	if (this->ContactIndex > 7)
+		this->ContactIndex = 0;
 }
 
 void PhoneBook::SearchContact()
@@ -71,14 +73,14 @@ void PhoneBook::SearchContact()
 		std::cout << "Enter the conatc\'s index: ";
 		if (!std::getline(std::cin, ContactIndex))
 			exit(0);
-		if (ContactIndex.length() == 1 &&  isNumber(ContactIndex))
-			Contact = std::stoi(ContactIndex);
+		if (ContactIndex.length() == 1 && isNumber(ContactIndex))
+			Contact = std::atoi(ContactIndex.c_str());
 		if (Contact < 1 || Contact > 8)
 			std::cout << "\x1b[31m" <<"Invalid input" << "\x1b[0m" << std::endl;
 		else
 		{
 			if (!this->contact[Contact - 1].CheckEmpty())
-				return  ;
+				return ;
 			std::cout << "----------->> CONTACT #" << Contact << " <<-----------" << std::endl;
 			this->contact[Contact - 1].ShowContactInfo();
 			std::cout << "--------------------------------------" << std::endl;
