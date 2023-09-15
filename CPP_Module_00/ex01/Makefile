@@ -6,7 +6,7 @@
 #    By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/31 02:15:03 by mghalmi           #+#    #+#              #
-#    Updated: 2023/08/31 04:28:24 by mghalmi          ###   ########.fr        #
+#    Updated: 2023/09/15 16:43:04 by mghalmi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ RESET	= \e[0m
 
 all: $(NAME)
 
-$(NAME): $(SRC) MyAwesomePhoneBook.hpp
+$(NAME): $(SRC) ContactClass.hpp   PhoneBookClass.hpp
 	@printf "$(GRAY) - Compiling $(NAME)... $(RESET)\n"
 	@ $(CC) $(FLAGS) $(SRC) -o $(NAME)
 	@printf "$(GREEN) - Executable ready.\n$(RESET)"

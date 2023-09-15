@@ -6,11 +6,11 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 03:06:06 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/15 15:37:39 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/09/15 16:43:45 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "MyAwesomePhoneBook.hpp"
+#include "PhoneBookClass.hpp"
 
 PhoneBook::PhoneBook(){};
 PhoneBook::~PhoneBook(){};

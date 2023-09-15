@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   MyAwesomePhoneBook.hpp                             :+:      :+:    :+:   */
+/*   PhoneBookClass.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/31 03:14:55 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/03 12:58:06 by mghalmi          ###   ########.fr       */
+/*   Created: 2023/09/15 16:41:57 by mghalmi           #+#    #+#             */
+/*   Updated: 2023/09/15 16:42:47 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MYAWSESOMEPHONEBOOK_HPP
-# define MYAWSESOMEPHONEBOOK_HPP
+#ifndef PHONEBOOKCLASS_HPP
+# define PHONEBOOKCLASS_HPP
 
 #include <iostream>
 #include <string.h>
@@ -20,24 +20,7 @@
 #include <thread>
 #include <chrono>
 #include <unistd.h>
-
-class Contact
-{
-	private:
-		std::string FirstName;
-		std::string LastName;
-		std::string Nickname;
-		std::string PhoneNumber;
-		std::string DarksetSecret;
-	public:
-		Contact();
-		~Contact();
-		std::string CheckInput(std::string mssg);
-		void    CreatContact();
-		void    ShowContact();
-		int		CheckEmpty();
-		void	ShowContactInfo();
-};
+#include "ContactClass.hpp"
 
 class PhoneBook
 {

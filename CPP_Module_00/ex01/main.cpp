@@ -6,11 +6,12 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 04:23:01 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/03 11:16:47 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/09/15 16:44:03 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "MyAwesomePhoneBook.hpp"
+#include "ContactClass.hpp"
+#include "PhoneBookClass.hpp"
 
 int main(void)
 {
