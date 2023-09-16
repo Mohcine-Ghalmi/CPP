@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 03:06:06 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/15 16:43:45 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/09/15 21:16:19 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void    PhoneBook::AddConatct()
 	{
 		std::cout << ".";
 		std::flush(std::cout);
-		// sleep();
+		sleep(1);
 	}
 	std::cout << std::endl;
 	std::cout << "Contact Added";
