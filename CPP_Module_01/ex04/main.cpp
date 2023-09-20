@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 19:04:34 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/18 14:36:02 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/09/20 11:46:03 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void replaceAll(std::string& str, const std::string& s1, const std::string& s2)
     const size_t s1Length = s1.length();
     std::string result;
 
-    while ((foundPos = str.find(s1, startPos)) != std::string::npos)
+    while ((foundPos = str.find(s1, startPos)) != std::string::npos && !s1.empty())
     {
         result.append(str, startPos, foundPos - startPos);
         result.append(s2);
@@ -44,11 +44,6 @@ int main(int argc, char **argv)
     std::string outputFileName = std::string(inputFileName) + ".replace";
 
     std::ifstream inputFile(inputFileName);
-    if (s1.empty()) 
-    {
-        std::cerr << "Error: Cannot replace an empty string with another string." << std::endl;
-        return (0);
-    }
     if (!inputFile)
     {
         std::cerr << "Error: Cannot open input file " << inputFileName << std::endl;
