@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: sleeps <sleeps@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 21:04:51 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/22 21:05:17 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/09/23 19:54:52 by sleeps           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "Fixed.hpp"
 
 int main( void ) {
     Fixed a;
