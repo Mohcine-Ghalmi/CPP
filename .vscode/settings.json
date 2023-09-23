@@ -61,6 +61,13 @@
         "utility": "cpp",
         "vector": "cpp",
         "iomanip": "cpp",
-        "thread": "cpp"
-    }
+        "thread": "cpp",
+        "__functional_base_03": "cpp",
+        "deque": "cpp",
+        "fstream": "cpp",
+        "stack": "cpp",
+        "map": "cpp",
+        "__tree": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
