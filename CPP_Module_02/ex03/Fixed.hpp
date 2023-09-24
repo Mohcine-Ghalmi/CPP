@@ -6,7 +6,7 @@
 /*   By: sleeps <sleeps@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 21:04:49 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/24 16:37:54 by sleeps           ###   ########.fr       */
+/*   Updated: 2023/09/24 16:25:59 by sleeps           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,4 @@ class Fixed
 };
 
 std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
-
 #endif

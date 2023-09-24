@@ -6,7 +6,7 @@
 /*   By: sleeps <sleeps@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 21:04:47 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/24 21:38:14 by sleeps           ###   ########.fr       */
+/*   Updated: 2023/09/24 21:36:05 by sleeps           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void Fixed::setRawBits( int const raw )
 
 float Fixed::toFloat() const
 {
-    return (value + 0.0) / (1 << fractionalBits);
+    return ((value) / (1 << fractionalBits) + (0.0));
 }
 
 int Fixed::toInt() const
