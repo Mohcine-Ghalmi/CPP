@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 21:04:47 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/25 17:25:39 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/09/26 15:34:50 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,11 @@ bool Fixed::operator>=(const Fixed &other) const
 bool Fixed::operator<=(const Fixed &other) const
 {
     return this->value <= other.value;
+}
+
+bool Fixed::operator==(const Fixed &other) const
+{
+    return this->value == other.value;
 }
 
 bool Fixed::operator!=(const Fixed &other) const

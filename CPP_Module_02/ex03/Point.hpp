@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 17:25:17 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/25 17:25:18 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/09/26 14:40:13 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ class Point
         Point(const Point &other);
         ~Point();
         Point& operator=(const Point &other);
-        Fixed getX();
-        Fixed getY();
+        Fixed getX() const;
+        Fixed getY() const;
 };
 
 bool bsp( Point const a, Point const b, Point const c, Point const point);
