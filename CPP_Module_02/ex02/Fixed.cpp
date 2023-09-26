@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sleeps <sleeps@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 21:04:47 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/24 21:38:14 by sleeps           ###   ########.fr       */
+/*   Updated: 2023/09/25 11:35:41 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,6 @@ bool Fixed::operator!=(const Fixed &other) const
     return this->value != other.value;
 }
 
-//+, -, *, and /.
 Fixed Fixed::operator+(const Fixed &other) const
 {
     return Fixed(this->toFloat() + other.toFloat());
@@ -104,8 +103,6 @@ Fixed Fixed::operator/(const Fixed &other) const
 {
     return Fixed(this->toFloat() / other.toFloat());
 }
-
-//++ --
 
 Fixed& Fixed::operator++()
 {
@@ -132,8 +129,6 @@ Fixed Fixed::operator--(int)
     --(*this);
     return tmp;    
 }
-
-//min and max
 
 const Fixed& Fixed::min(const Fixed& A, const Fixed& B)
 {
