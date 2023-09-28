@@ -6,7 +6,7 @@
 /*   By: sleeps <sleeps@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 18:31:45 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/28 15:41:33 by sleeps           ###   ########.fr       */
+/*   Updated: 2023/09/28 19:40:18 by sleeps           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,14 @@ ScavTrap::~ScavTrap()
 
 void ScavTrap::attack(const std::string& target)
 {
+    if (getHitPoints() == 0 || getEnergyPoints() == 0)
+    {
+        std::cout << "ScavTrap " << getName() << " can't attack. Not enough h`it points or energy points." << std::endl;
+        return ;
+    }
     std::cout << "ScavTrap " << getName() << " attacks " << target << " with its special ScavTrap attack, causing " << getAttackDamage() << " points of damage!" << std::endl;
+    unsigned int EnergyPoints = getEnergyPoints();
+    setEnergyPoints(EnergyPoints--);
 }
 
 void ScavTrap::guardGate()

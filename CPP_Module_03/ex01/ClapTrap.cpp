@@ -6,7 +6,7 @@
 /*   By: sleeps <sleeps@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 18:31:31 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/28 15:41:09 by sleeps           ###   ########.fr       */
+/*   Updated: 2023/09/28 19:38:59 by sleeps           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,16 @@ std::string ClapTrap::getName()
 unsigned int ClapTrap::getAttackDamage()
 {
     return this->attackDamage;
+}
+
+unsigned int ClapTrap::getEnergyPoints()
+{
+    return this->energyPoints;
+}
+
+unsigned int ClapTrap::getHitPoints()
+{
+    return this->hitPoints;
 }
 
 ClapTrap::ClapTrap(const std::string& name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0)
