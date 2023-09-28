@@ -3,25 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: sleeps <sleeps@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 18:31:39 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/27 18:31:40 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/09/28 15:02:47 by sleeps           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main()
 {
-    ClapTrap claptrap("SLEEPS");
-
+    ClapTrap claptrap("CL4P-TP");
     claptrap.attack("Bandit");
     claptrap.takeDamage(3);
     claptrap.beRepaired(2);
-    claptrap.attack("Badass Bandit");
-    claptrap.takeDamage(12);
-    claptrap.beRepaired(5);
+
+    ScavTrap Scavtrap("SC4V-TP");
+    Scavtrap.attack("Badass Bandit");
+    Scavtrap.guardGate();
 
     return 0;
 }
