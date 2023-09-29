@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sleeps <sleeps@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/27 18:31:39 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/28 15:02:47 by sleeps           ###   ########.fr       */
+/*   Created: 2023/09/27 18:31:48 by mghalmi           #+#    #+#             */
+/*   Updated: 2023/09/28 15:30:51 by sleeps           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
+
 #include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#include <iostream>
 
-int main()
+class ScavTrap : public ClapTrap
 {
-    ClapTrap claptrap("CL4P-TP");
-    claptrap.attack("Bandit");
-    claptrap.takeDamage(3);
-    claptrap.beRepaired(2);
+    public:
+        ScavTrap(const std::string& name);
+        ~ScavTrap();
+        void attack(const std::string& target);
+        void guardGate();
+};
 
-    ScavTrap Scavtrap("SC4V-TP");
-    Scavtrap.attack("Badass Bandit");
-    Scavtrap.guardGate();
-
-    return 0;
-}
+#endif
