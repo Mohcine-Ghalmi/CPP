@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: sleeps <sleeps@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 18:31:20 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/27 18:31:21 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/09/30 16:29:46 by sleeps           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,11 @@ class ClapTrap
         unsigned int energyPoints;
         unsigned int attackDamage;
     public:
+        ClapTrap();
+        ClapTrap(const ClapTrap &other);
         ClapTrap(const std::string& name);
         ~ClapTrap();
+        ClapTrap& operator=(const ClapTrap &other);
         void attack(const std::string& target);
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);

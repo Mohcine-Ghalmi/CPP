@@ -6,11 +6,18 @@
 /*   By: sleeps <sleeps@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 18:31:31 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/29 20:27:32 by sleeps           ###   ########.fr       */
+/*   Updated: 2023/09/30 16:31:31 by sleeps           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+
+ClapTrap::ClapTrap(){};
+
+ClapTrap::ClapTrap(const ClapTrap &other)
+{
+    *this = other;
+}
 
 ClapTrap::ClapTrap(const std::string& name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0)
 {
@@ -42,6 +49,18 @@ void ClapTrap::takeDamage(unsigned int amount)
     }
     hitPoints -= amount;
     std::cout << "ClapTrap " << name << " takes " << amount << " points of damage!" << std::endl;
+}
+
+ClapTrap& ClapTrap::operator=(const ClapTrap &other)
+{
+    if (this != &other)
+    {
+        this->energyPoints = other.energyPoints;
+        this->attackDamage = other.attackDamage;
+        this->hitPoints = other.hitPoints;
+        this->name = other.name;
+    }
+    return *this;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
