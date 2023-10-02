@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sleeps <sleeps@student.42.fr>              +#+  +:+       +#+         #
+#    By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/27 18:31:43 by mghalmi           #+#    #+#              #
-#    Updated: 2023/09/30 17:03:26 by sleeps           ###   ########.fr        #
+#    Updated: 2023/10/02 09:12:10 by mghalmi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 	= Now_it’s_weird!
 SRC  	= ClapTrap.cpp  DiamondTrap.cpp  FragTrap.cpp  ScavTrap.cpp  main.cpp
 CC		= c++
-FLAGS	= -Wall -Wextra -Werror -std=c++98
+FLAGS	= -Wall -Wextra -Werror -std=c++98 
 RM		= rm -rf
 
 GREEN	= \e[92;5;118m
