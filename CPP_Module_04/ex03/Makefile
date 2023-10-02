@@ -6,12 +6,12 @@
 #    By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/02 10:08:18 by mghalmi           #+#    #+#              #
-#    Updated: 2023/10/02 13:50:13 by mghalmi          ###   ########.fr        #
+#    Updated: 2023/10/02 13:53:31 by mghalmi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 	= Abstract_class
-SRC  	= Animal.cpp      Cat.cpp         Dog.cpp         WrongAnimal.cpp WrongCat.cpp    main.cpp Brain.cpp
+NAME 	= Interface_&_recap
+SRC  	= 
 CC		= c++
 FLAGS	= -Wall -Wextra -Werror -std=c++98 
 RM		= rm -rf
@@ -25,7 +25,7 @@ RESET	= \e[0m
 
 all: $(NAME)
 
-$(NAME): $(SRC) Animal.hpp      Cat.hpp         Dog.hpp         WrongAnimal.hpp WrongCat.hpp Brain.hpp
+$(NAME): $(SRC)
 	@printf "$(GRAY) - Compiling $(NAME)... $(RESET)\n"
 	@ $(CC) $(FLAGS) $(SRC) -o $(NAME)
 	@printf "$(GREEN) - Executable ready.\n$(RESET)"
