@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/01 18:06:44 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/10/03 17:37:11 by mghalmi          ###   ########.fr       */
+/*   Created: 2023/10/04 13:34:15 by mghalmi           #+#    #+#             */
+/*   Updated: 2023/10/04 13:41:02 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#pragma once
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#include "ImateriaSource.hpp"
+#include "Amateria.hpp"
 
-class FragTrap : public ClapTrap
+class MateriaSource : public IMateriaSource
 {
-    public:
-        FragTrap(const std::string& name);
-        ~FragTrap();
-        void highFivesGuys();
-};
+    private:
+        AMateria* learnedMaterias[4];
 
-#endif
+    public:
+        MateriaSource();
+        virtual void learnMateria(AMateria* materia);
+        virtual AMateria* createMateria(std::string const & type);
+        virtual ~MateriaSource();
+};
+    

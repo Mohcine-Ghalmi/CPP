@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Icharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/01 18:06:44 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/10/03 17:37:11 by mghalmi          ###   ########.fr       */
+/*   Created: 2023/10/03 18:12:53 by mghalmi           #+#    #+#             */
+/*   Updated: 2023/10/04 12:22:11 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#pragma once
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#include <iostream>
+#include "Amateria.hpp"
 
-class FragTrap : public ClapTrap
+
+class AMateria;
+class ICharacter
 {
     public:
-        FragTrap(const std::string& name);
-        ~FragTrap();
-        void highFivesGuys();
+        virtual ~ICharacter() {}
+        virtual std::string const &getName() const = 0;
+        virtual void equip(AMateria *m) = 0;
+        virtual void unequip(int idx) = 0;
+        virtual void use(int idx, ICharacter &target) = 0;
 };
-
-#endif

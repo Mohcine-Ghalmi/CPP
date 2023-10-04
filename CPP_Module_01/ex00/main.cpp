@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 16:56:01 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/16 18:29:18 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/10/03 12:46:37 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,5 @@ int main()
     delete heapZombie1;
     delete heapZombie2;
     randomChump("randum chump zombie");
-
     return 0;
 }

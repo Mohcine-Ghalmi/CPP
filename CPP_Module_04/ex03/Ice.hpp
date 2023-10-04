@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/01 18:06:44 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/10/03 17:37:11 by mghalmi          ###   ########.fr       */
+/*   Created: 2023/10/03 17:52:04 by mghalmi           #+#    #+#             */
+/*   Updated: 2023/10/04 12:20:37 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#pragma once
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
 
-class FragTrap : public ClapTrap
+#include <iostream>
+#include "Amateria.hpp"
+#include "Character.hpp"
+#include "Icharacter.hpp"
+#include "Cure.hpp"
+
+class Ice : public AMateria
 {
     public:
-        FragTrap(const std::string& name);
-        ~FragTrap();
-        void highFivesGuys();
+        Ice();
+        Ice(const Ice &other);
+        virtual ~Ice();
+        Ice &operator=(const Ice &other);
+        AMateria *clone() const;
+        void use(class ICharacter &target);
 };
 
-#endif

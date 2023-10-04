@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/15 16:56:37 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/10/03 12:45:37 by mghalmi          ###   ########.fr       */
+/*   Created: 2023/10/03 18:16:18 by mghalmi           #+#    #+#             */
+/*   Updated: 2023/10/04 12:16:26 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
+
+#pragma once
 
 #include <iostream>
+#include "Amateria.hpp"
+#include "Icharacter.hpp"
 
-class Zombie
+class Character : public ICharacter
 {
     private:
         std::string name;
+        AMateria *inventory[4];
     public:
-        Zombie(std::string name);
-        ~Zombie();
-        void announce(void);
+        Character(const std::string &name);
+        Character(const Character &other);
+        virtual ~Character();
+        Character &operator=(const Character &other);
+        std::string const &getName() const;
+        void equip(AMateria *m);
+        void unequip(int idx);
+        void use(int idx, ICharacter &target);
 };
 
-void randomChump(std::string name);
-Zombie* newZombie(std::string name);
-
-#endif

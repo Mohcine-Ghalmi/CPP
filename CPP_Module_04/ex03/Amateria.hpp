@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Amateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/01 18:06:44 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/10/03 17:37:11 by mghalmi          ###   ########.fr       */
+/*   Created: 2023/10/03 17:47:10 by mghalmi           #+#    #+#             */
+/*   Updated: 2023/10/04 12:16:16 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#pragma once
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
 
-class FragTrap : public ClapTrap
+#include <iostream>
+#include "Icharacter.hpp"
+
+class AMateria
 {
-    public:
-        FragTrap(const std::string& name);
-        ~FragTrap();
-        void highFivesGuys();
-};
+    protected:
+        std::string type;
 
-#endif
+    public:
+        AMateria(const std::string &type);
+        AMateria(const AMateria &other);
+        virtual ~AMateria();
+        AMateria &operator=(const AMateria &other);
+        std::string const &getType() const;
+        virtual AMateria *clone() const = 0;
+        virtual void use(class ICharacter &target);
+};
