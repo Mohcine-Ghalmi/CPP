@@ -6,11 +6,32 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 18:07:01 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/10/02 09:59:36 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/10/04 14:21:10 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
+
+DiamondTrap::DiamondTrap() : FragTrap(), ScavTrap()
+{
+    std::cout << "Default constructor called for DiamondTrap" << std::endl;
+}
+
+DiamondTrap::DiamondTrap(const DiamondTrap& other) : FragTrap(other), ScavTrap(other), name(other.name)
+{
+    std::cout << "Copy constructor called for DiamondTrap" << std::endl;
+}
+
+DiamondTrap& DiamondTrap::operator=(const DiamondTrap& other)
+{
+    if (this != &other)
+    {
+        FragTrap::operator=(other);
+        ScavTrap::operator=(other);
+        name = other.name;
+    }
+    return *this;
+}
 
 DiamondTrap::DiamondTrap(const std::string name) : ClapTrap(name + "_clap_name"), FragTrap(name), ScavTrap(name), name(name)
 {

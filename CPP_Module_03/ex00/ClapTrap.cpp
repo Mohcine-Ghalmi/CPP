@@ -3,16 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sleeps <sleeps@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 18:31:17 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/09/30 16:30:25 by sleeps           ###   ########.fr       */
+/*   Updated: 2023/10/04 14:12:37 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(){}
+ClapTrap::ClapTrap() : name("default"), hitPoints(10), energyPoints(10), attackDamage(0)
+{
+    std::cout << "ClapTrap " << name << " is born!" << std::endl;
+}
 
 ClapTrap::ClapTrap(const ClapTrap &other)
 {

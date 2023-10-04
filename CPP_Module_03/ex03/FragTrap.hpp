@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/01 18:07:11 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/10/02 10:01:19 by mghalmi          ###   ########.fr       */
+/*   Created: 2023/10/01 18:06:44 by mghalmi           #+#    #+#             */
+/*   Updated: 2023/10/04 14:29:33 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@
 class FragTrap : virtual public ClapTrap
 {
     public:
+        FragTrap();
+        FragTrap(const FragTrap& other);
+        FragTrap& operator=(const FragTrap& other);
         FragTrap(const std::string& name);
         ~FragTrap();
         void highFivesGuys();

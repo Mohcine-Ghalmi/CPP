@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 18:12:53 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/10/04 12:22:11 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/10/04 14:06:54 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 #include <iostream>
 #include "Amateria.hpp"
-
 
 class AMateria;
 class ICharacter
