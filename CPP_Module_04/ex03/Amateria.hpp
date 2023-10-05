@@ -6,12 +6,11 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 17:47:10 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/10/04 12:16:16 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/10/05 15:30:27 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-
 
 #include <iostream>
 #include "Icharacter.hpp"

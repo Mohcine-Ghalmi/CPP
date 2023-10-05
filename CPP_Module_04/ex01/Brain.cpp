@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 12:00:16 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/10/02 13:15:07 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/10/05 14:38:27 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,19 @@ Brain::Brain(const Brain& other)
 {
     for (int i = 0; i < 100; ++i)
         ideas[i] = other.ideas[i];
-    std::cout << "Brain deep copy created!" << std::endl;
+    std::cout << "Brain copy created!" << std::endl;
 }
 
 Brain::~Brain()
 {
     std::cout << "Brain destroyed!" << std::endl;
+}
+
+Brain& Brain::operator=(const Brain& other)
+{
+    if (this == &other)
+        return *this;
+    for (int i = 0; i < 100; ++i)
+        this->ideas[i] = other.ideas[i];
+    return *this;
 }

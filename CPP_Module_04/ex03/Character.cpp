@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 18:49:13 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/10/03 18:50:03 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/10/05 15:23:14 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Character::Character(const std::string &name) : name(name)
 {
     for (int i = 0; i < 4; ++i)
-        inventory[i] = nullptr;
+        inventory[i] = NULL;
 }
 
 Character::Character(const Character &other) : name(other.name)
@@ -25,7 +25,7 @@ Character::Character(const Character &other) : name(other.name)
         if (other.inventory[i])
             inventory[i] = other.inventory[i]->clone();
         else
-            inventory[i] = nullptr;
+            inventory[i] = NULL;
     }
 }
 
@@ -48,7 +48,7 @@ Character &Character::operator=(const Character &other)
             if (other.inventory[i])
                 inventory[i] = other.inventory[i]->clone();
             else
-                inventory[i] = nullptr;
+                inventory[i] = NULL;
         }
     }
     return *this;
@@ -75,7 +75,7 @@ void Character::equip(AMateria *m)
 void Character::unequip(int idx)
 {
     if (idx >= 0 && idx < 4)
-        inventory[idx] = nullptr;
+        inventory[idx] = NULL;
 }
 
 void Character::use(int idx, ICharacter &target)

@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 10:49:54 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/10/02 10:57:33 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/10/05 14:30:32 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Dog : public Animal
         Dog(const Dog& other);
         ~Dog();
         Dog& operator=(const Dog& other);
-        virtual void makeSound() const;
+        void makeSound() const;
 };
 
 #endif

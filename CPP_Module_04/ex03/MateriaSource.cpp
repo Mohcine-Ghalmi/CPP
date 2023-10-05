@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 13:34:13 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/10/04 13:41:16 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/10/05 15:23:14 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 MateriaSource::MateriaSource()
 {
     for (int i = 0; i < 4; ++i)
-        learnedMaterias[i] = nullptr;
+        learnedMaterias[i] = NULL;
 }
 
 void MateriaSource::learnMateria(AMateria* materia)

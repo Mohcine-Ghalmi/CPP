@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 10:52:49 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/10/02 10:56:50 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/10/05 14:31:27 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Cat : public Animal
         Cat(const Cat& other);
         ~Cat();
         Cat& operator=(const Cat& other);
-        virtual void makeSound() const;
+        void makeSound() const;
 };
 
 #endif

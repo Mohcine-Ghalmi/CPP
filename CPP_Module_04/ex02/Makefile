@@ -6,11 +6,11 @@
 #    By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/02 10:08:18 by mghalmi           #+#    #+#              #
-#    Updated: 2023/10/02 13:50:13 by mghalmi          ###   ########.fr        #
+#    Updated: 2023/10/02 11:51:23 by mghalmi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 	= Abstract_class
+NAME 	= I_don’t_want_to_set_the_world_on_fire
 SRC  	= Animal.cpp      Cat.cpp         Dog.cpp         WrongAnimal.cpp WrongCat.cpp    main.cpp Brain.cpp
 CC		= c++
 FLAGS	= -Wall -Wextra -Werror -std=c++98 
