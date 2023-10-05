@@ -6,20 +6,20 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 18:31:45 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/10/04 14:14:55 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/10/04 14:49:42 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other)
-{
-    std::cout << "Copy constructor called for ScavTrap" << std::endl;
-}
-
 ScavTrap::ScavTrap() : ClapTrap()
 {
     std::cout << "Default constructor called for ScavTrap" << std::endl;
+}
+
+ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other)
+{
+    std::cout << "Copy constructor called for ScavTrap" << std::endl;
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& other)
