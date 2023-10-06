@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 17:48:31 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/10/03 17:49:22 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/10/05 16:33:54 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ AMateria::~AMateria() {}
 
 AMateria &AMateria::operator=(const AMateria &other)
 {
-    if (this != &other)
-        this->type = other.type;
+    (void)other;
+    // if (this != &other)
+    //     this->type = other.type;
     return *this;
 }
 

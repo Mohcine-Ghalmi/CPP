@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 18:16:18 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/10/04 12:16:26 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/10/05 16:19:58 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Character : public ICharacter
         std::string name;
         AMateria *inventory[4];
     public:
+        Character();
         Character(const std::string &name);
         Character(const Character &other);
         virtual ~Character();

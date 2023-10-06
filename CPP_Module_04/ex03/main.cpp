@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 17:46:09 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/10/04 13:38:25 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/10/06 17:31:03 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,13 @@
 
 int main()
 {
+
+    Character p;
+    AMateria   *ptr= new Cure;
+    p.equip(ptr);
+    p.unequip(0);
+    delete ptr;
+    return 0;
     IMateriaSource* src = new MateriaSource();
     src->learnMateria(new Ice());
     src->learnMateria(new Cure());
@@ -36,6 +43,5 @@ int main()
     delete bob;
     delete me;
     delete src;
-    
     return 0;
 }

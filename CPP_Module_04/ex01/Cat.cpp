@@ -6,13 +6,13 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 10:53:22 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/10/05 15:19:03 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/10/06 17:30:16 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat() : brain(new Brain()) 
+Cat::Cat()
 {
     this->brain = new Brain();
     type = "Cat";

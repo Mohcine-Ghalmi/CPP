@@ -6,7 +6,7 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 10:09:04 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/10/05 15:22:17 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/10/06 17:23:18 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ int main()
 
     for (int i = 0; i < 4; ++i)
         delete animalArray[i];
+
     return 0;
 }

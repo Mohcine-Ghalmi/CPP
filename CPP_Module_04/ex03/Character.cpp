@@ -6,11 +6,16 @@
 /*   By: mghalmi <mghalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 18:49:13 by mghalmi           #+#    #+#             */
-/*   Updated: 2023/10/05 15:23:14 by mghalmi          ###   ########.fr       */
+/*   Updated: 2023/10/05 16:39:40 by mghalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
+
+Character::Character()
+{
+    for (int i = 0; i < 4; ++i)
+        inventory[i] = NULL;}
 
 Character::Character(const std::string &name) : name(name)
 {
